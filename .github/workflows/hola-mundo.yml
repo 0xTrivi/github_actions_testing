@@ -1,13 +1,13 @@
-name: Learning Github Actions
-run-name: ¡I'm learning Github Actions!
+name: Learning Github Actions with Platzi
+run-name: Learning Github Actions
 on: [push]
 jobs:
   hola-mundo:
-    runs-on: ubuntu-least
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Definir variable
+      - name: Define variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Run script
         run: python main.py
